@@ -19,6 +19,7 @@ ENV DEBIAN_FRONTEND noninteractive
 #ENV MYSQL_PASSWORD moodle
 #ENV MYSQL_DB moodle
 ENV MOODLE_URL http://192.168.59.103
+ENV DB_ENV_TYPE_DB mariadb
 
 # ADD http://downloads.sourceforge.net/project/moodle/Moodle/stable27/moodle-latest-27.tgz /tmp/moodle-latest-27.tgz
 ADD ./foreground.sh /etc/apache2/foreground.sh
