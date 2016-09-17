@@ -19,6 +19,7 @@ To spawn a new instance of Moodle:
 docker run -d --name DB -p 3306:3306 -e MYSQL_DATABASE=moodle -e MYSQL_USER=moodle -e MYSQL_PASSWORD=moodle centurylink/mysql
 docker run -d -P --name moodle --link DB:DB -e MOODLE_URL=http://192.168.59.103:8080 -p 8080:80 jauer/moodle
 ```
+I added new env: DB_ENV_TYPE_DB for change db type as mysqli/mariadb etc.
 
 You can visit the following URL in a browser to get started:
 
