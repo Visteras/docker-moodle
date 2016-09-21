@@ -1,6 +1,6 @@
 # Dockerfile for moodle instance. more dockerish version of https://github.com/sergiogomez/docker-moodle
 FROM ubuntu:14.04
-MAINTAINER Jon Auer <jda@coldshore.com>
+MAINTAINER Anatoliy Evladov <moodle@visteras.ru>
 
 VOLUME ["/var/moodledata"]
 EXPOSE 80 443
@@ -38,6 +38,9 @@ RUN apt-get update && \
 
 # Enable SSL, moodle requires it
 RUN a2enmod ssl && a2ensite default-ssl # if using proxy, don't need actually secure connection
+
+#Change max upload size
+RUN perl -e 's/upload_max_filesize = 2M/upload_max_filesize = 25M/' -pi /etc/php5/apache2/php.ini
 
 CMD ["/etc/apache2/foreground.sh"]
 
