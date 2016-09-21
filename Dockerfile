@@ -3,6 +3,7 @@ FROM ubuntu:14.04
 MAINTAINER Anatoliy Evladov <moodle@visteras.ru>
 
 VOLUME ["/var/moodledata"]
+VOLUME ["/var/www/html"]
 EXPOSE 80 443
 COPY moodle-config.php /var/www/html/config.php
 
