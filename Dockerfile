@@ -43,7 +43,6 @@ RUN a2enmod ssl && a2ensite default-ssl # if using proxy, don't need actually se
 #Change max upload size
 RUN perl -e 's/upload_max_filesize = 2M/upload_max_filesize = 25M/' -pi /etc/php5/apache2/php.ini
 
-VOLUME ["/var/www/html"]
 CMD ["/etc/apache2/foreground.sh"]
 
 #RUN easy_install supervisor

@@ -90,7 +90,7 @@ $CFG->wwwroot   = getenv('MOODLE_URL');
 // - On Windows systems you might specify something like 'c:\moodledata'
 
 $CFG->dataroot  = '/var/moodledata';
-
+$CFG->themedir = '/var/moodledata/themes';
 
 //=========================================================================
 // 4. DATA FILES PERMISSIONS
