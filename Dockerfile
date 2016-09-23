@@ -34,7 +34,7 @@ RUN apt-get update && \
 	git clone -b $MOODLE_VERSION git://git.moodle.org/moodle.git --depth=1 && \
 	mv /tmp/moodle/* /var/www/html/ && \
 	rm /var/www/html/index.html && \
-	mkdir /var/moodledata/themes && \
+	mkdir -p /var/moodledata/themes && \
 	chown -R www-data:www-data /var/www/html && \
 	chmod +x /etc/apache2/foreground.sh
 
