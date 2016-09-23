@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "placeholder" > /var/moodledata/placeholder
+echo "placeholder" > /var/moodledata/themes/placeholder
 chown -R www-data:www-data /var/moodledata
 chmod 777 /var/moodledata
 
